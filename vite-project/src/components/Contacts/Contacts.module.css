@@ -1,0 +1,20 @@
+.container {
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+}
+.text {
+  margin: 0;
+}
+.btn {
+  padding: 10px;
+}
