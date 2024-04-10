@@ -25,13 +25,6 @@ export default function App() {
       return prevContacts.filter((contact) => contact.id !== contactId);
     });
   };
-  // const handleChange (event) => {
-  // setContacts(event.target.value)
-
-  // const arrContacts = contacts.filter((elem) => {
-  //   const contactName = elem.name.toLocaleLowerCase();
-  //   return contactName.includes(inputValue.toLowerCase());
-  // });
 
   return (
     <div>
