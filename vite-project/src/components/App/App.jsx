@@ -14,6 +14,14 @@ export default function App() {
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
 
+  // const ContactSchema = Yup.object().shape({
+  //   name: Yup.string()
+  //     .min(3, "Too short!")
+  //     .max(50, "Too long!")
+  //     .required("Required"),
+  //   tel: Yup.string().phone("UA", true).required("Required"),
+  // });
+
   const addContact = (newContact) => {
     setContacts((prevContacts) => {
       return [...prevContacts, newContact];
@@ -29,7 +37,11 @@ export default function App() {
   return (
     <div>
       <h1>Phonebook</h1>
-      <ContactForm initial={InitialContacts} onAdd={addContact} />
+      <ContactForm
+        initial={InitialContacts}
+        // validation={ContactSchema}
+        onAdd={addContact}
+      />
       <SearchBox value={filter} onFilter={setFilter} />
       <ContactList contacts={visibleContact} onDelete={delContact} />
     </div>
