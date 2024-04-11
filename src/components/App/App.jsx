@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-// import * as Yup from "yup";
 import ContactForm from "../ContactForm/ContactForm";
 import SearchBox from "../SearchBox/SearchBox";
 import ContactList from "../ContactList/ContactList";
@@ -9,12 +8,12 @@ import { nanoid } from "nanoid";
 
 export default function App() {
   // const [contacts, setContacts] = useState(InitialContacts);
-  const [contacts, setContacts] = useState((InitialContacts) => {
+  const [contacts, setContacts] = useState((initialContacts) => {
     const savedContact = window.localStorage.getItem("saved-contacts");
     if (savedContact !== null) {
       return JSON.parse(savedContact);
     }
-    return contacts;
+    return InitialContacts;
   });
 
   const [filter, setFilter] = useState("");
