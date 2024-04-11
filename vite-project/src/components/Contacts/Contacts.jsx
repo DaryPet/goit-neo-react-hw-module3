@@ -7,7 +7,8 @@ export default function Contacts({ data: { id, name, number }, onDelete }) {
     <div className={css.container}>
       <div className={css.data}>
         <p className={css.text}>
-          <RiUser3Fill /> {name}
+          <RiUser3Fill />
+          {name}
         </p>
         <p className={css.text}>
           <BiSolidPhone />

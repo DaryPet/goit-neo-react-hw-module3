@@ -8,6 +8,7 @@ import InitialContacts from "../contacts.json";
 import { nanoid } from "nanoid";
 
 export default function App() {
+  // const [contacts, setContacts] = useState(InitialContacts);
   const [contacts, setContacts] = useState((InitialContacts) => {
     const savedContact = window.localStorage.getItem("saved-contacts");
     if (savedContact !== null) {

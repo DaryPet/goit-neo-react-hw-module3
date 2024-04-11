@@ -1,9 +1,16 @@
-.wrap {
-  margin-bottom: 20px;
-  align-items: start;
-  padding: 0;
-}
 .text {
   padding: 2px;
   margin: 4px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 8px;
+  margin-bottom: 30px;
+}
+
+.data {
+  padding: 8px;
 }
